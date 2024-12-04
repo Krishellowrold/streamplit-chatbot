@@ -1,9 +1,8 @@
 import streamlit as st
 import openai
-
-# Configure OpenAI API key
-openai.api_key = "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"
-
+import os
+# Access the secret key
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 st.title("Simple AI Chatbot")
 st.markdown("A simple chatbot powered by OpenAI's GPT model.")
 
